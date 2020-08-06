@@ -1,11 +1,12 @@
 import av
 import os
 import cv2
+import pandas as pd
+
 
 from pathlib import Path
 
-data_folder = Path("")
-# find . -name '.DS_Store' -type f -delete
+data_folder = Path("path/to/Normal_Videos_for_Event_Recognition")
 
 
 def read_write_with_cv(file_path):
@@ -39,6 +40,10 @@ def read_write_with_av(file_path):
 
 
 def processing():
+    '''
+
+    :return:
+    '''
     dirs = os.listdir(data_folder)
     for dir in dirs:
         for file in os.listdir(data_folder / dir):
